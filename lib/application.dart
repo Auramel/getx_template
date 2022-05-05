@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'configs/routes.dart';
+import 'modules/auth/bindings/login_bindings.dart';
 import 'modules/auth/ui/screens/login_screen.dart';
 
 class Application extends StatelessWidget {
@@ -30,13 +30,10 @@ class Application extends StatelessWidget {
         theme: ThemeData(
           primaryColor: Colors.white,
           primarySwatch: Colors.blueGrey,
-          fontFamily: 'Inter',
-          textTheme: GoogleFonts.interTextTheme(
-            Theme.of(context).textTheme,
-          )
         ),
         getPages: <GetPage<dynamic>>[
           GetPage<LoginScreen>(
+            binding: LoginBindings(),
             name: Routes.login,
             page: () => const LoginScreen(),
           ),
