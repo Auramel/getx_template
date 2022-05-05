@@ -16,9 +16,7 @@ class LoginScreen extends GetView<LoginController> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Palette.belizehole,
-        title: const Text(
-          'Auramel Inc.',
-        ),
+        title: const Text('Auramel Inc.'),
       ),
       body: SafeArea(
         child: Padding(

@@ -5,7 +5,9 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'configs/routes.dart';
 import 'modules/auth/bindings/login_bindings.dart';
+import 'modules/auth/bindings/register_bindings.dart';
 import 'modules/auth/ui/screens/login_screen.dart';
+import 'modules/auth/ui/screens/register_screen.dart';
 
 class Application extends StatelessWidget {
   const Application(): super(key: null);
@@ -36,6 +38,11 @@ class Application extends StatelessWidget {
             binding: LoginBindings(),
             name: Routes.login,
             page: () => const LoginScreen(),
+          ),
+          GetPage<LoginScreen>(
+            binding: RegisterBindings(),
+            name: Routes.register,
+            page: () => const RegisterScreen(),
           ),
         ],
       ),
