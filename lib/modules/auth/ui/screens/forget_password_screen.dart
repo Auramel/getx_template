@@ -7,10 +7,10 @@ import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import '../../../../configs/constants.dart';
 import '../../../../configs/palette.dart';
 import '../../../../widgets/custom_input.dart';
-import '../../controllers/register_controller.dart';
+import '../../controllers/forget_password_controller.dart';
 
-class RegisterScreen extends GetView<RegisterController> {
-  const RegisterScreen(): super(key: null);
+class ForgetPasswordScreen extends GetView<ForgetPasswordController> {
+  const ForgetPasswordScreen(): super(key: null);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class RegisterScreen extends GetView<RegisterController> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Palette.belizehole,
-        title: const Text('Create new account'),
+        title: const Text('Recovery account'),
       ),
       body: SafeArea(
         child: Padding(
@@ -27,26 +27,6 @@ class RegisterScreen extends GetView<RegisterController> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-            CustomInput(
-                controller: controller.loginController,
-                placeholder: 'Login',
-                icon: const Icon(
-                  CupertinoIcons.person,
-                  color: Palette.clouds,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: CustomInput(
-                  controller: controller.passwordController,
-                  placeholder: 'Password',
-                  isPassword: true,
-                  icon: const Icon(
-                    CupertinoIcons.padlock,
-                    color: Palette.clouds,
-                  ),
-                ),
-              ),
               Padding(
                 padding: const EdgeInsets.only(top: 10),
                 child: CustomInput(
@@ -78,7 +58,7 @@ class RegisterScreen extends GetView<RegisterController> {
                       ),
                     ),
                   ),
-                  child: const Text('Register'),
+                  child: const Text('Get sms with code'),
                 ),
               ),
             ],

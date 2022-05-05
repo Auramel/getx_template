@@ -20,6 +20,6 @@ class LoginController extends Controller {
   }
 
   void onForgetPasswordClicked() {
-    
+    Get.toNamed(Routes.forgetPassword);
   }
 }
