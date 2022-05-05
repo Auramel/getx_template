@@ -10,6 +10,8 @@ import 'modules/auth/bindings/register_bindings.dart';
 import 'modules/auth/ui/screens/forget_password_screen.dart';
 import 'modules/auth/ui/screens/login_screen.dart';
 import 'modules/auth/ui/screens/register_screen.dart';
+import 'modules/home/bindings/home_bindings.dart';
+import 'modules/home/ui/screens/home_screen.dart';
 
 class Application extends StatelessWidget {
   const Application(): super(key: null);
@@ -50,6 +52,11 @@ class Application extends StatelessWidget {
             binding: ForgetPasswordBindings(),
             name: Routes.forgetPassword,
             page: () => const ForgetPasswordScreen(),
+          ),
+          GetPage<HomeScreen>(
+            binding: HomeBindings(),
+            name: Routes.home,
+            page: () => const HomeScreen(),
           ),
         ],
       ),
